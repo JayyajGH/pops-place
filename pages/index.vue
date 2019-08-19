@@ -50,10 +50,6 @@
       </section>
 
     </main>
-
-    <footer class="footer">
-      Footer here
-    </footer>
   </div>
 </template>
 
@@ -90,10 +86,6 @@
   .header2 {
     font-size: 36px;
     font-weight: 700;
-  }
-
-  .footer {
-      background-color: lightgray;
   }
 
   .text {
