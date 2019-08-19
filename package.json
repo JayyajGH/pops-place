@@ -1,0 +1,21 @@
+{
+  "name": "pops-place",
+  "version": "1.0.0",
+  "description": "Homepage for Pops Place",
+  "author": "Jason Harris",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0",
+    "nuxt-i18n": "^5.12.7",
+    "vue-light-gallery": "^1.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
