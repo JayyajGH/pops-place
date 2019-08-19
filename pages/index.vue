@@ -1,38 +1,6 @@
 <template>
   <div>
-    <header>
-      <nav class="site-nav">
-        <div class="header__wrapper">
-          <a href="/">
-            <img src="~/assets/images/logo2.png" class="logo__image--small">
-          </a>
-          <hamburger-menu class="menu--hamburger" @trigger-menu="triggerMenu"></hamburger-menu>
-        </div>
-
-        <ul class="site-nav__menu site-nav__menu--normal">
-            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('beer')}}</a></li>
-            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('food')}}</a></li>
-            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('gallery')}}</a></li>
-            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('about')}}</a></li>
-            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('contact')}}</a></li>
-        </ul>
-        <!--
-        <div class="language-switcher">
-          <language-switcher></language-switcher>
-        </div>
-        -->
-      </nav>
-      <div class="hero__wrapper">
-        <div class="hero">
-          <img src="~/assets/images/logo4.png" class="logo__image">
-          <h2 class="tag">
-            <span class="tag__text">GOURMET BURGERS</span>
-            <span class="tag__text">CRAFT BEER</span>
-            <span class="tag__text--alt">LJUBLJANA</span>
-          </h2>
-        </div>
-      </div>
-    </header>
+    <site-header></site-header>
     <main class="container">
       <section class="wrapper--small">
         <h2 class="header2">Beer</h2>
@@ -90,31 +58,21 @@
 </template>
 
 <script>
-  import LanguageSwitcher from '@/components/language-switcher/language-switcher';
   import GalleryView from '@/components/gallery-view/gallery-view';
   import InfoPanels from '@/components/info-panels/info-panels';
-  import HamburgerMenu from '@/components/hamburger-menu/hamburger-menu';
+  import SiteHeader from '@/components/site-header/site-header';
 
   export default {
     components: {
-      LanguageSwitcher,
       GalleryView,
       InfoPanels,
-      HamburgerMenu
-    },
-    methods: {
-      triggerMenu: function (event) {
-        var mainSiteNav = document.getElementsByClassName('site-nav')[0];
-        mainSiteNav.classList.toggle('is-mobile-active');
-
-        var pageBody = document.getElementsByTagName('body')[0];
-        pageBody.classList.toggle('is-overflowhidden');
-      }
+      SiteHeader
     }
   }
 </script>
 
 <style>
+  /* Put this stuff in a reset file */
   body {
     margin: 0;
     font-family: 'PT Sans', sans-serif;
@@ -127,6 +85,7 @@
   a {
     text-decoration: none;
   }
+  /* Put this stuff in a reset file */
 
   .header2 {
     font-size: 36px;
@@ -149,30 +108,8 @@
     }
   }
 
-  .language-switcher {
-    display: flex;
-    font-size: 14px;
-  }
-
   .is-overflowhidden {
     overflow: hidden;
-  }
-
-  @media (min-width: 800px) {
-    .site-nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      padding: 0.5rem 1rem 0.5rem 1rem;
-      max-width: 1300px;
-      margin: 0 auto;
-    }
-  }
-
-  .language {
-    width: 14px;
-    padding-right: 5px;
   }
 
   .hero {
@@ -191,11 +128,6 @@
     }
   }
 
-  .logo__image--small {
-    width: 60px;
-    padding-left: 10px;
-  }
-
   .hero__wrapper {
     background-image: url('~assets/images/background3.jpg');
     min-height: 100vh;
@@ -205,22 +137,6 @@
     align-items: center;
     justify-content: center;
     filter: grayscale(30%) brightness(0.9);
-  }
-
-  .site-nav__link {
-    padding-right: 20px;
-    font-size: 2rem;
-    color: grey;
-  }
-
-  @media (min-width: 800px) {
-    .site-nav__link {
-      font-size: 1.1rem;
-    }
-  }
-
-  .site-nav__link:hover {
-    color: black;
   }
 
   .tag {
@@ -245,86 +161,5 @@
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
-  }
-
-  .menu--hamburger {
-    display: inline-block;
-  }
-
-  @media (min-width: 800px) {
-    .menu--hamburger {
-      display: none;
-    }
-  }
-
-  .site-nav__menu--normal {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 1.3rem;
-    font-weight: 600;
-  }
-
-  .site-nav__menu {
-    display: none;
-    flex-direction: column;
-  }
-
-  .site-nav.is-mobile-active .site-nav__menu {
-    display: flex;
-    align-items: center;
-  }
-
-  /* The menu should always be displayed on larger screens */
-  @media (min-width: 800px) {
-    .site-nav__menu {
-      display: flex;
-      flex-direction: row;
-    }
-  }
-
-  .site-nav.is-mobile-active {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: white;
-    z-index: 2;
-  }
-
-  /* If the mobile menu is left open and the screen expanded then the mobile menu would stay open */
-  /* For that reason we need to override any mobile classes on larger screens */
-  @media (min-width: 800px) {
-    .site-nav {
-      position: static !important;
-      width: auto !important;
-    }
-  }
-
-  .site-nav__item {
-    padding-bottom: 1.5rem;
-  }
-
-  @media (min-width: 800px) {
-    .site-nav__item {
-      padding-bottom: 0;
-    }
-  }
-
-  .header__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-  }
-
-  @media (min-width: 800px) {
-    .header__wrapper {
-      margin-bottom: 0;
-      padding-left: 0;
-      padding-right: 0;
-    }
   }
 </style>
