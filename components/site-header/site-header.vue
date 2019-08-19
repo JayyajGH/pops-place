@@ -23,6 +23,7 @@
     </nav>
     <div class="hero__wrapper">
       <div class="hero">
+        <h1 class="u-hidden-visually">Pop's Place</h1>
         <img src="~/assets/images/logo4.png" class="logo__image">
         <h2 class="tag">
           <span class="tag__text">GOURMET BURGERS</span>
@@ -57,6 +58,17 @@
 </script>
 
 <style scoped>
+  /* NB: This will be hidden from view but still be available to screenreaders
+   http://webaim.org/techniques/css/invisiblecontent/ */
+  .u-hidden-visually {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden;
+  }
+
   @media (min-width: 800px) {
     .site-nav {
       display: flex;
