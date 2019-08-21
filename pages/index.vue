@@ -65,7 +65,7 @@
 </script>
 
 <style>
-  /* Put this stuff in a reset file */
+  /* Put this stuff in a global file */
   body {
     margin: 0;
     font-family: 'PT Sans', sans-serif;
@@ -78,7 +78,7 @@
   a {
     text-decoration: none;
   }
-  /* Put this stuff in a reset file */
+  /* Put this stuff in a global file */
 
   .header2 {
     font-size: 36px;

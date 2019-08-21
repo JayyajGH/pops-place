@@ -1,8 +1,11 @@
-# pops-place
-
-> Homepage for Pops Place
+# Pops place homepage
 
 **This is currently work in progress**
+
+This is a theoretical homepage for a bar to test out some ideas.  It's key features are:
+* Multiple languages
+* Has an image gallery
+
 
 ## Build Setup
 
