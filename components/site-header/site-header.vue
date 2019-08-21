@@ -190,6 +190,10 @@
     }
   }
 
+  .logo__image {
+      margin-bottom: 1rem;
+  }
+
   .logo__image--small {
     width: 60px;
   }
