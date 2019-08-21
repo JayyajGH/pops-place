@@ -2,6 +2,8 @@
 
 > Homepage for Pops Place
 
+**This is currently work in progress**
+
 ## Build Setup
 
 ``` bash
