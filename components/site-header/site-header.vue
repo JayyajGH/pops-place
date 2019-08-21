@@ -8,18 +8,19 @@
         <hamburger-menu class="menu--hamburger" @trigger-menu="triggerMenu"></hamburger-menu>
       </div>
 
-      <ul class="site-nav__menu site-nav__menu--normal">
-          <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('beer')}}</a></li>
-          <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('food')}}</a></li>
-          <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('gallery')}}</a></li>
-          <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('about')}}</a></li>
-          <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('contact')}}</a></li>
-      </ul>
-      <!--
-      <div class="language-switcher">
+        <ul class="site-nav__menu site-nav__menu--normal">
+            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('beer')}}</a></li>
+            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('food')}}</a></li>
+            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('gallery')}}</a></li>
+            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('about')}}</a></li>
+            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('contact')}}</a></li>
+        </ul>
+      </div>
+
+      <div class="language-switch">
         <language-switcher></language-switcher>
       </div>
-      -->
+
     </nav>
     <div class="hero__wrapper">
       <div class="hero">
@@ -82,19 +83,25 @@
   }
 
   .site-nav__link {
-    padding-right: 20px;
     font-size: 2rem;
     color: grey;
   }
 
   @media (min-width: 800px) {
     .site-nav__link {
-      font-size: 1.1rem;
+      font-size: 1.5rem;
+      padding-left: 20px;
     }
   }
 
   .site-nav__link:hover {
     color: black;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
 
   .site-nav__menu--normal {
@@ -131,6 +138,21 @@
     right: 0;
     background-color: white;
     z-index: 2;
+  }
+
+  .language-switch {
+    display: none;
+  }
+
+  .site-nav.is-mobile-active .language-switch {
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: 800px) {
+    .language-switch {
+      display: block;
+    }
   }
 
   /* If the mobile menu is left open and the screen expanded then the mobile menu would stay open */
@@ -170,7 +192,6 @@
 
   .logo__image--small {
     width: 60px;
-    padding-left: 10px;
   }
 
   .menu--hamburger {
@@ -181,10 +202,5 @@
     .menu--hamburger {
       display: none;
     }
-  }
-
-  .language-switcher {
-    display: flex;
-    font-size: 14px;
   }
 </style>
