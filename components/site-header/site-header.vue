@@ -3,7 +3,7 @@
     <nav class="site-nav">
       <div class="header__wrapper">
         <a href="/">
-          <img src="~/assets/images/logo-small.png" class="logo__image--small">
+          <img src="~/assets/images/logo-small.png" class="logo__image--small" alt="Pop's Place">
         </a>
         <hamburger-menu class="menu--hamburger" @trigger-menu="triggerMenu"></hamburger-menu>
       </div>
@@ -20,16 +20,16 @@
       <div class="language-switch">
         <language-switcher></language-switcher>
       </div>
-
     </nav>
+
     <div class="hero__wrapper">
       <div class="hero">
         <h1 class="u-hidden-visually">Pop's Place</h1>
-        <img src="~/assets/images/logo-large.png" class="logo__image">
+        <img src="~/assets/images/logo-large.png" class="logo__image" alt="">
         <h2 class="tag">
           <span class="tag__text">GOURMET BURGERS</span>
           <span class="tag__text">CRAFT BEER</span>
-          <span class="tag__text--alt">LJUBLJANA</span>
+          <span class="tag__text tag__text--alt">LJUBLJANA</span>
         </h2>
       </div>
     </div>
@@ -202,5 +202,34 @@
     .menu--hamburger {
       display: none;
     }
+  }
+
+  .hero__wrapper {
+    background-image: url('~assets/images/background3.jpg');
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(30%) brightness(0.9);
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .tag {
+    color: white;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .tag__text {
+    display: block;
+  }
+
+  .tag__text--alt {
+    color: wheat;
   }
 </style>

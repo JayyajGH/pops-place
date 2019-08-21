@@ -1,6 +1,5 @@
 <template>
   <div>
-    <site-header></site-header>
     <main class="container">
       <section class="wrapper--small">
         <h2 class="header2">Beer</h2>
@@ -56,13 +55,11 @@
 <script>
   import GalleryView from '@/components/gallery-view/gallery-view';
   import InfoPanels from '@/components/info-panels/info-panels';
-  import SiteHeader from '@/components/site-header/site-header';
 
   export default {
     components: {
       GalleryView,
-      InfoPanels,
-      SiteHeader
+      InfoPanels
     }
   }
 </script>
@@ -104,10 +101,6 @@
     overflow: hidden;
   }
 
-  .hero {
-    text-align: center;
-  }
-
   .logo__image {
     width: 200px;
     background-color: rgb(255,255,255,0.5);
@@ -118,30 +111,6 @@
     .logo__image {
       width: 275px;
     }
-  }
-
-  .hero__wrapper {
-    background-image: url('~assets/images/background3.jpg');
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    filter: grayscale(30%) brightness(0.9);
-  }
-
-  .tag {
-    color: white;
-    text-align: center;
-  }
-
-  .tag__text {
-    display: block;
-  }
-
-  .tag__text--alt {
-    color: wheat;
   }
 
   .container {
