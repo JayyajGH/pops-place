@@ -1,6 +1,6 @@
 <template>
   <div>
-    <site-header></site-header>
+    <site-header class="site-header"></site-header>
     <nuxt />
     <site-footer></site-footer>
   </div>
@@ -16,6 +16,10 @@
 </script>
 
 <style>
+  .site-header {
+      margin-bottom: 1rem;
+  }
+
   .footer {
       background-color: lightgray;
     }

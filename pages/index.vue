@@ -83,6 +83,7 @@
   .header2 {
     font-size: 36px;
     font-weight: 700;
+    margin-bottom: 1rem;
   }
 
   .text {
@@ -121,6 +122,7 @@
   .wrapper--small {
     padding-left: 20px;
     padding-right: 20px;
+    margin-bottom: 1rem;
     text-align: center;
   }
 </style>
