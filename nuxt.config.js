@@ -23,7 +23,8 @@ export default {
   ** Global CSS
   */
   css: [
-    '@/assets/css/normalize.css'
+    '@/assets/css/normalize.css',
+    '@/assets/css/global.css'
   ],
   /*
   ** Plugins to load before mounting the App

@@ -65,27 +65,6 @@
 </script>
 
 <style>
-  /* Put this stuff in a global file */
-  body {
-    margin: 0;
-    font-family: 'PT Sans', sans-serif;
-  }
-
-  ul {
-    list-style:none;
-  }
-
-  a {
-    text-decoration: none;
-  }
-  /* Put this stuff in a global file */
-
-  .header2 {
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-
   .text {
     max-width: 100%;
     margin: 0 auto;
@@ -122,7 +101,7 @@
   .wrapper--small {
     padding-left: 20px;
     padding-right: 20px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     text-align: center;
   }
 </style>
