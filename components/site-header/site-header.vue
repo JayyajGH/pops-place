@@ -3,7 +3,7 @@
     <nav class="site-nav">
       <div class="header__wrapper">
         <a href="/">
-          <img src="~/assets/images/logo2.png" class="logo__image--small">
+          <img src="~/assets/images/logo-small.png" class="logo__image--small">
         </a>
         <hamburger-menu class="menu--hamburger" @trigger-menu="triggerMenu"></hamburger-menu>
       </div>
@@ -25,7 +25,7 @@
     <div class="hero__wrapper">
       <div class="hero">
         <h1 class="u-hidden-visually">Pop's Place</h1>
-        <img src="~/assets/images/logo4.png" class="logo__image">
+        <img src="~/assets/images/logo-large.png" class="logo__image">
         <h2 class="tag">
           <span class="tag__text">GOURMET BURGERS</span>
           <span class="tag__text">CRAFT BEER</span>
