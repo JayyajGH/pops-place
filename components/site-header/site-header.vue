@@ -90,12 +90,14 @@
   @media (min-width: 800px) {
     .site-nav__link {
       font-size: 1.5rem;
-      padding-left: 20px;
+      margin-left: 20px;
     }
   }
 
   .site-nav__link:hover {
     color: black;
+    text-decoration: underline;
+    text-decoration-color: green;
   }
 
   .menu {
@@ -136,7 +138,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: white;
+    background-color: var(--white);
     z-index: 2;
   }
 
