@@ -63,7 +63,6 @@
   }
 
   .panel__top {
-    /*background-color: lightsteelblue;*/
     height: 100%;
     background-image: url('https://loremflickr.com/250/150/nature');
     background-size: cover;
