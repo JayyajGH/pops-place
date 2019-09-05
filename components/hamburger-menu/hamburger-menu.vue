@@ -34,13 +34,13 @@
 <style scoped>
   .hamburger {
     border: none;
-    background-color: white;
+    background-color: var(--white);
   }
 
   .bar {
     width: 35px;
     height: 5px;
-    background-color: black;
+    background-color: var(--black);
     margin: 6px auto 6px auto;
     transition: 0.4s;
   }
