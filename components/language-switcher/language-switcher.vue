@@ -39,5 +39,6 @@
 
   .language-option {
     text-decoration: none;
+    color: var(--grey-base);
   }
 </style>

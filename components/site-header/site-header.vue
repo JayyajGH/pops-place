@@ -84,7 +84,7 @@
 
   .site-nav__link {
     font-size: 2rem;
-    color: grey;
+    color: var(--grey-base);
   }
 
   @media (min-width: 800px) {
