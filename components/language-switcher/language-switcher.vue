@@ -32,6 +32,12 @@
     padding: 3px;
   }
 
+  .language-switcher:hover .language-option {
+    text-decoration: underline;
+    text-decoration-color: green;
+    color: black;
+  }
+
   .language {
     width: 18px;
     padding-right: 3px;
@@ -39,6 +45,6 @@
 
   .language-option {
     text-decoration: none;
-    color: var(--grey-base);
+    color: var(--grey-dark);
   }
 </style>
