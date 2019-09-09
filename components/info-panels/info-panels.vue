@@ -70,7 +70,7 @@
   }
 
   .panel__bottom {
-    background-color: lightgray;
+    background-color: var(--grey-light);
     padding: 10px;
   }
 

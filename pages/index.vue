@@ -68,7 +68,7 @@
   .text {
     max-width: 100%;
     margin: 0 auto;
-    color: #666;
+    color: var(--grey-base);
   }
 
   @media (min-width: 37.5em) {

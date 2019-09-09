@@ -34,8 +34,8 @@
 
   .language-switcher:hover .language-option {
     text-decoration: underline;
-    text-decoration-color: green;
-    color: black;
+    text-decoration-color: var(--green-base);
+    color: var(--black);
   }
 
   .language {

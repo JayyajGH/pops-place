@@ -95,9 +95,9 @@
   }
 
   .site-nav__link:hover {
-    color: black;
+    color: var(--black);
     text-decoration: underline;
-    text-decoration-color: green;
+    text-decoration-color: var(--green-base);
   }
 
   .menu {
@@ -226,7 +226,7 @@
   }
 
   .tag {
-    color: white;
+    color: var(--white);
     font-size: 20px;
     text-align: center;
   }

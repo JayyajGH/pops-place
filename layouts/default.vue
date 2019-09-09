@@ -19,8 +19,4 @@
   .site-header {
       margin-bottom: 1rem;
   }
-
-  .footer {
-      background-color: lightgray;
-    }
 </style>
