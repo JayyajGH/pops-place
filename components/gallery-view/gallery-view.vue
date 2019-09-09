@@ -48,7 +48,6 @@
           >
             <img :src="thumb" class="anchor" alt="">
           </li>
-
       </ul>
 
   </div>
@@ -70,6 +69,12 @@
           { title:'img 4', url: 'image2.jpg' },
           { title:'img 5', url: 'image2.jpg' },
           { title:'img 6', url: 'image2.jpg' },
+          { title:'img 7', url: 'image2.jpg' },
+          { title:'img 8', url: 'image2.jpg' },
+          { title:'img 9', url: 'image2.jpg' },
+          { title:'img 10', url: 'image2.jpg' },
+          { title:'img 11', url: 'image2.jpg' },
+          { title:'img 12', url: 'image2.jpg' }
         ],
         index: null,
       };
@@ -78,7 +83,6 @@
 </script>
 
 <style>
-
   .grid {
     display: grid;
     grid-gap: 10px;

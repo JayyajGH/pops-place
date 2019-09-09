@@ -44,7 +44,6 @@
     height: 200px;
     margin-bottom: 20px;
     width: 80%;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -73,5 +72,4 @@
     background-color: var(--grey-light);
     padding: 10px;
   }
-
 </style>
