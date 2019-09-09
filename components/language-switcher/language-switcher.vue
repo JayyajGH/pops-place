@@ -1,6 +1,6 @@
 <template>
   <div class="language-switcher">
-    <img src="~/assets/images/language.svg" class="language-switcher__image" />
+    <img src="~/assets/images/language.svg" class="language-switcher__image" alt=""/>
     <nuxt-link
         v-for="locale in availableLocales"
         :key="locale.code"

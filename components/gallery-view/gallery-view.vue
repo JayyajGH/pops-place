@@ -46,7 +46,7 @@
             :key="thumbIndex"
             @click="index = thumbIndex"
           >
-            <img :src="thumb" class="anchor">
+            <img :src="thumb" class="anchor" alt="">
           </li>
 
       </ul>
