@@ -227,7 +227,7 @@
 
   .tag {
     color: var(--white);
-    font-size: 20px;
+    font-size: 1.3rem;
     text-align: center;
   }
 

@@ -26,10 +26,15 @@
   .language-switcher {
     display: flex;
     align-items: center;
-    font-size: 12px;
+    font-size: 0.8rem;
     border: 1px solid black;
     border-radius: 3px;
     padding: 3px;
+  }
+
+  .language-switcher__option {
+    text-decoration: none;
+    color: var(--grey-dark);
   }
 
   .language-switcher:hover .language-switcher__option {
@@ -43,8 +48,4 @@
     padding-right: 3px;
   }
 
-  .language-switcher__option {
-    text-decoration: none;
-    color: var(--grey-dark);
-  }
 </style>
