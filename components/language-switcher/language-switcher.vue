@@ -47,5 +47,4 @@
     width: 18px;
     padding-right: 3px;
   }
-
 </style>

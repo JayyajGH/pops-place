@@ -48,10 +48,12 @@
     methods: {
       triggerMenu: function (event) {
         var mainSiteNav = document.getElementsByClassName('site-nav')[0];
-        mainSiteNav.classList.toggle('is-mobile-active');
-
         var pageBody = document.getElementsByTagName('body')[0];
-        pageBody.classList.toggle('is-overflowhidden');
+
+        if (mainSiteNav && pageBody) {
+          mainSiteNav.classList.toggle('is-mobile-active');
+          pageBody.classList.toggle('is-overflowhidden');
+        }
       }
     }
   }
