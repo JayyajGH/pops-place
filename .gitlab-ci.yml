@@ -20,4 +20,4 @@ deploy:
   image: python:latest
   script:
     - pip install awscli
-    - aws s3 cp ./ s3://pops-place/ --recursive
+    - aws s3 cp dist s3://pops-place/ --recursive
