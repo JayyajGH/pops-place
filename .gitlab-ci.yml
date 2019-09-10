@@ -3,7 +3,7 @@ build site:
   stage: build
   script:
     - npm install --progress=false
-    - npm run build
+    - npm run generate
   artifacts:
     expire_in: 1 week
     paths:
@@ -20,4 +20,4 @@ deploy:
   image: python:latest
   script:
     - pip install awscli
-    - aws s3 cp ./ s3://pops-place/ --recursive --exclude "*" --include "*.html"
+    - aws s3 cp ./ s3://pops-place/ --recursive
