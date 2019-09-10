@@ -18,6 +18,7 @@ build site:
 
 deploy:
   image: python:latest
+  stage: deploy
   script:
     - pip install awscli
     - aws s3 cp dist s3://pops-place/ --recursive
