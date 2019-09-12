@@ -9,12 +9,12 @@ build site:
     paths:
       - dist
 
-#unit test:
-#  image: node:10.16
-#  stage: test
-#  script:
-#    - npm install --progress=false
-#    - npm run unit
+unit test:
+  image: node:10.16
+  stage: test
+  script:
+    - npm install --progress=false
+    - npm run test
 
 deploy:
   image: python:latest
