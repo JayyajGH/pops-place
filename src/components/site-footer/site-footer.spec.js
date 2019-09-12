@@ -1,19 +1,15 @@
 import test from 'ava';
 import { shallowMount } from '@vue/test-utils';
-import SiteHeader from './site-header';
+import SiteFooter from './site-footer';
 
 let wrapper;
 
 test.beforeEach(() => {
-  wrapper = shallowMount(SiteHeader, {
-    mocks: {
-      $t: (msg) => msg
-    }
-  });
+  wrapper = shallowMount(SiteFooter);
 });
 
 test('it renders the correct initial markup', (t) => {
   // Check that the component is at least created in it's most basic sense
-  t.true(wrapper.is('header'));
+  t.true(wrapper.is('footer'));
   t.true(true);
 });
