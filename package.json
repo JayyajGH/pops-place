@@ -10,7 +10,8 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+    "test": "ava"
   },
   "dependencies": {
     "nuxt": "^2.0.0",
@@ -18,13 +19,28 @@
     "vue-light-gallery": "^1.0.1"
   },
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "ava": "^2.3.0",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.3.0",
     "eslint-config-prettier": "^6.2.0",
     "eslint-loader": "^3.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.2.3",
+    "jsdom": "^15.1.1",
+    "jsdom-global": "^3.0.2",
     "nodemon": "^1.18.9",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "require-extension-hooks": "^0.3.3",
+    "require-extension-hooks-babel": "^1.0.0",
+    "require-extension-hooks-vue": "^3.0.0"
+  },
+  "ava": {
+    "require": [
+      "./setup.js"
+    ],
+    "files": [
+      "./**/*.spec.js"
+    ]
   }
 }
