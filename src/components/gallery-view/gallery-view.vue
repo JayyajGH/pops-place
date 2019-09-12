@@ -57,6 +57,7 @@
   import { LightGallery } from 'vue-light-gallery';
 
   export default {
+    name: 'GalleryView',
     components: {
       LightGallery
     },

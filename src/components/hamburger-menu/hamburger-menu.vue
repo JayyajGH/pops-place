@@ -8,6 +8,7 @@
 
 <script>
   export default {
+    name: 'HamburgerMenu',
     data() {
       return {
         menuOpen: false

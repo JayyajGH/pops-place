@@ -41,6 +41,7 @@
   import LanguageSwitcher from '@/components/language-switcher/language-switcher';
 
   export default {
+    name: 'SiteHeader',
     components: {
       HamburgerMenu,
       LanguageSwitcher

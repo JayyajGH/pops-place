@@ -23,6 +23,7 @@
 
 <script>
   export default {
+    name: 'InfoPanels'
   };
 </script>
 
