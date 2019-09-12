@@ -29,6 +29,7 @@
     "eslint-plugin-vue": "^5.2.3",
     "jsdom": "^15.1.1",
     "jsdom-global": "^3.0.2",
+    "module-alias": "^2.2.1",
     "nodemon": "^1.18.9",
     "prettier": "^1.18.2",
     "require-extension-hooks": "^0.3.3",
