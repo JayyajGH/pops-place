@@ -9,11 +9,11 @@
       </div>
 
         <ul class="site-nav__menu site-nav__menu--normal">
-            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('beer')}}</a></li>
-            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('food')}}</a></li>
-            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('gallery')}}</a></li>
-            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('about')}}</a></li>
-            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('contact')}}</a></li>
+            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('menuBeer')}}</a></li>
+            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('menuFood')}}</a></li>
+            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('menuGallery')}}</a></li>
+            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('menuAbout')}}</a></li>
+            <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('menuContact')}}</a></li>
         </ul>
       </div>
 
@@ -54,6 +54,24 @@
         if (mainSiteNav && pageBody) {
           mainSiteNav.classList.toggle('is-mobile-active');
           pageBody.classList.toggle('is-overflowhidden');
+        }
+      }
+    },
+    i18n: {
+      messages: {
+        en: {
+          menuBeer: 'Beer',
+          menuFood: 'Food',
+          menuGallery: 'Gallery',
+          menuAbout: 'About',
+          menuContact: 'Contact'
+        },
+        sl: {
+          menuBeer: 'Pivo',
+          menuFood: 'Hrana',
+          menuGallery: 'Galerija',
+          menuAbout: 'O Nas',
+          menuContact: 'Kontakt'
         }
       }
     }

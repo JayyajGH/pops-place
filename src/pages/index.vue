@@ -2,7 +2,7 @@
   <div>
     <main class="container">
       <section class="wrapper--small">
-        <h2 class="header2">Beer</h2>
+        <h2 class="header2">{{$t('headerBeer')}}</h2>
         <div class="text">
           <p>
             A huge selection of both local and foreign beers from around the world
@@ -16,7 +16,7 @@
         </div>
       </section>
       <section class="wrapper--small">
-        <h2 class="header2">Food</h2>
+        <h2 class="header2">{{$t('headerFood')}}</h2>
         <div class="text">
           <p>
             Locally sourced beef, aged in house, and custom blended.
@@ -28,11 +28,11 @@
         </div>
       </section>
       <section class="wrapper--small">
-        <h2 class="header2">Gallery</h2>
+        <h2 class="header2">{{$t('headerGallery')}}</h2>
         <gallery-view></gallery-view>
       </section>
       <section class="wrapper--small">
-        <h2 class="header2">About</h2>
+        <h2 class="header2">{{$t('headerAbout')}}</h2>
         <div class="text">
           <p>
             We are a burger and craft beer bar located in the heart of Ljubljana, Slovenia.

@@ -50,18 +50,16 @@ export default {
      fallbackLocale: 'en',
      messages: {
        en: {
-         beer: 'Beer',
-         food: 'Food',
-         gallery: 'Gallery',
-         about: 'About',
-         contact: 'Contact'
+         headerBeer: 'Beer',
+         headerFood: 'Food',
+         headerGallery: 'Gallery',
+         headerAbout: 'About'
        },
        sl: {
-         beer: 'Pivo',
-         food: 'Hrana',
-         gallery: 'Galerija',
-         about: 'O Nas',
-         contact: 'Kontakt'
+         headerBeer: 'Pivo',
+         headerFood: 'Hrana',
+         headerGallery: 'Galerija',
+         headerAbout: 'O Nas'
        }
      }
    }
