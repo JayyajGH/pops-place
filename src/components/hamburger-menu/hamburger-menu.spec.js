@@ -77,3 +77,8 @@ test('calling triggerMenu will set the local data up correctly when the menu is 
 
   t.is(hamburgerMenuWrapper.vm.$data.menuOpen, false);
 });
+
+test('Hamburger menu snapshot test', (t) => {
+  const hamburgerMenuWrapper = hamburgerMenuFactory({menuOpen: false});
+  t.snapshot({ html: hamburgerMenuWrapper.html() })
+})
