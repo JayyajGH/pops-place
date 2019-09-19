@@ -1,0 +1,73 @@
+import test from 'ava';
+import { shallowMount } from '@vue/test-utils';
+import HamburgerMenu from './hamburger-menu';
+
+const hamburgerMenuFactory = () => {
+  return shallowMount(HamburgerMenu);
+};
+
+test('it renders the correct initial markup', (t) => {
+  // Check that the component is at least created in it's most basic sense
+  const hamburgerMenuWrapper = hamburgerMenuFactory();
+  t.true(hamburgerMenuWrapper.is('button'));
+});
+
+test('calling triggerMenu will raise the correct events when the menu is initially closed', (t) => {
+  const hamburgerMenuWrapper = hamburgerMenuFactory();
+  const buttonEvent = 'trigger-menu';
+  const buttonOpenEvent = 'trigger-menu-opened';
+  const buttonCloseEvent = 'trigger-menu-closed';
+
+  // Set the menu to be initially closed
+  hamburgerMenuWrapper.setData({menuOpen: false});
+
+  const hamburgerButton = hamburgerMenuWrapper.find('button');
+  hamburgerButton.trigger('click');
+
+  // Test that the correct event is raised for the general change
+  t.is(hamburgerMenuWrapper.emitted()[buttonEvent].length, 1);
+  t.truthy(hamburgerMenuWrapper.emitted()[buttonEvent]);
+
+  // Test that an event is raised for the specfic open change (and not one for close)
+  t.is(hamburgerMenuWrapper.emitted()[buttonOpenEvent].length, 1);
+  t.falsy(hamburgerMenuWrapper.emitted()[buttonCloseEvent]);
+});
+
+test('calling triggerMenu will raise the correct events when the menu is initially open', (t) => {
+  const hamburgerMenuWrapper = hamburgerMenuFactory();
+  const buttonEvent = 'trigger-menu';
+  const buttonOpenEvent = 'trigger-menu-opened';
+  const buttonCloseEvent = 'trigger-menu-closed';
+
+  // Set the menu to be initially open
+  hamburgerMenuWrapper.setData({menuOpen: true});
+
+  const hamburgerButton = hamburgerMenuWrapper.find('button');
+  hamburgerButton.trigger('click');
+
+  // Test that the correct event is raised for the general change
+  t.is(hamburgerMenuWrapper.emitted()[buttonEvent].length, 1);
+  t.truthy(hamburgerMenuWrapper.emitted()[buttonEvent]);
+
+  // Test that an event is raised for the specfic close change (and not one for open)
+  t.is(hamburgerMenuWrapper.emitted()[buttonCloseEvent].length, 1);
+  t.falsy(hamburgerMenuWrapper.emitted()[buttonOpenEvent]);
+});
+
+test('calling triggerMenu will set the local data up correctly', (t) => {
+  const hamburgerMenuWrapper = hamburgerMenuFactory();
+  const hamburgerButton = hamburgerMenuWrapper.find('button');
+
+  // Set the menu to be initially closed
+  hamburgerMenuWrapper.setData({menuOpen: false});
+
+  // Trigger the menu to be opened
+  hamburgerButton.trigger('click');
+
+  t.is(hamburgerMenuWrapper.vm.$data.menuOpen, true);
+
+  // Trigger the menu to be closed
+  hamburgerButton.trigger('click');
+
+  t.is(hamburgerMenuWrapper.vm.$data.menuOpen, false);
+});
