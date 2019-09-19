@@ -30,7 +30,6 @@ test('calling triggerMenu will raise the correct events when the menu is initial
 
   // Test that the correct event is raised for the general change
   t.is(hamburgerMenuWrapper.emitted()[buttonEvent].length, 1);
-  t.truthy(hamburgerMenuWrapper.emitted()[buttonEvent]);
 
   // Test that an event is raised for the specfic open change (and not one for close)
   t.is(hamburgerMenuWrapper.emitted()[buttonOpenEvent].length, 1);
@@ -49,7 +48,6 @@ test('calling triggerMenu will raise the correct events when the menu is initial
 
   // Test that the correct event is raised for the general change
   t.is(hamburgerMenuWrapper.emitted()[buttonEvent].length, 1);
-  t.truthy(hamburgerMenuWrapper.emitted()[buttonEvent]);
 
   // Test that an event is raised for the specfic close change (and not one for open)
   t.is(hamburgerMenuWrapper.emitted()[buttonCloseEvent].length, 1);
