@@ -76,6 +76,22 @@ test('calling triggerMenu will set the local data up correctly when the menu is 
   t.is(hamburgerMenuWrapper.vm.$data.menuOpen, false);
 });
 
+test('when the menu is open the aria-expanded attribute is correctly set on the component', (t) => {
+  // Set the menu to be initially closed
+  const hamburgerMenuWrapper = hamburgerMenuFactory({menuOpen: true});
+
+  const hamburgerButton = hamburgerMenuWrapper.find('button');
+  t.is(hamburgerButton.attributes('aria-expanded'), 'true');
+});
+
+test('when the menu is closed the aria-expanded attribute is correctly set on the component', (t) => {
+  // Set the menu to be initially closed
+  const hamburgerMenuWrapper = hamburgerMenuFactory({menuOpen: false});
+
+  const hamburgerButton = hamburgerMenuWrapper.find('button');
+  t.is(hamburgerButton.attributes('aria-expanded'), 'false');
+});
+
 test('Hamburger menu snapshot test', (t) => {
   const hamburgerMenuWrapper = hamburgerMenuFactory({menuOpen: false});
   t.snapshot({ html: hamburgerMenuWrapper.html() })
