@@ -2,8 +2,14 @@ import test from 'ava';
 import { shallowMount } from '@vue/test-utils';
 import HamburgerMenu from './hamburger-menu';
 
-const hamburgerMenuFactory = () => {
-  return shallowMount(HamburgerMenu);
+const hamburgerMenuFactory = (values={}) => {
+  return shallowMount(HamburgerMenu, {
+    data() {
+      return {
+        ...values
+      }
+    }
+  });
 };
 
 test('it renders the correct initial markup', (t) => {
@@ -13,13 +19,11 @@ test('it renders the correct initial markup', (t) => {
 });
 
 test('calling triggerMenu will raise the correct events when the menu is initially closed', (t) => {
-  const hamburgerMenuWrapper = hamburgerMenuFactory();
+  // Set the menu to be initially closed
+  const hamburgerMenuWrapper = hamburgerMenuFactory({menuOpen: false});
   const buttonEvent = 'trigger-menu';
   const buttonOpenEvent = 'trigger-menu-opened';
   const buttonCloseEvent = 'trigger-menu-closed';
-
-  // Set the menu to be initially closed
-  hamburgerMenuWrapper.setData({menuOpen: false});
 
   const hamburgerButton = hamburgerMenuWrapper.find('button');
   hamburgerButton.trigger('click');
@@ -34,13 +38,11 @@ test('calling triggerMenu will raise the correct events when the menu is initial
 });
 
 test('calling triggerMenu will raise the correct events when the menu is initially open', (t) => {
-  const hamburgerMenuWrapper = hamburgerMenuFactory();
+  // Set the menu to be initially open
+  const hamburgerMenuWrapper = hamburgerMenuFactory({menuOpen: true});
   const buttonEvent = 'trigger-menu';
   const buttonOpenEvent = 'trigger-menu-opened';
   const buttonCloseEvent = 'trigger-menu-closed';
-
-  // Set the menu to be initially open
-  hamburgerMenuWrapper.setData({menuOpen: true});
 
   const hamburgerButton = hamburgerMenuWrapper.find('button');
   hamburgerButton.trigger('click');
@@ -54,19 +56,23 @@ test('calling triggerMenu will raise the correct events when the menu is initial
   t.falsy(hamburgerMenuWrapper.emitted()[buttonOpenEvent]);
 });
 
-test('calling triggerMenu will set the local data up correctly', (t) => {
-  const hamburgerMenuWrapper = hamburgerMenuFactory();
-  const hamburgerButton = hamburgerMenuWrapper.find('button');
-
+test('calling triggerMenu will set the local data up correctly when the menu is initally closed', (t) => {
   // Set the menu to be initially closed
-  hamburgerMenuWrapper.setData({menuOpen: false});
+  const hamburgerMenuWrapper = hamburgerMenuFactory({menuOpen: false});
+  const hamburgerButton = hamburgerMenuWrapper.find('button');
 
   // Trigger the menu to be opened
   hamburgerButton.trigger('click');
 
   t.is(hamburgerMenuWrapper.vm.$data.menuOpen, true);
+});
 
-  // Trigger the menu to be closed
+test('calling triggerMenu will set the local data up correctly when the menu is initally open', (t) => {
+  // Set the menu to be initially closed
+  const hamburgerMenuWrapper = hamburgerMenuFactory({menuOpen: true});
+  const hamburgerButton = hamburgerMenuWrapper.find('button');
+
+  // Trigger the menu to be opened
   hamburgerButton.trigger('click');
 
   t.is(hamburgerMenuWrapper.vm.$data.menuOpen, false);
