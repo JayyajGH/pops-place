@@ -1,5 +1,9 @@
 <template>
-  <button class="hamburger" @click="triggerMenu" :aria-expanded="menuOpen ? 'true' : 'false'" aria-label="Mobile menu trigger">
+  <button class="hamburger"
+          :class="menuOpen ? 'hamburger--close' : ''"
+          @click="triggerMenu"
+          :aria-expanded="menuOpen ? 'true' : 'false'"
+          aria-label="Mobile menu trigger">
     <div class="bar bar1"></div>
     <div class="bar bar2"></div>
     <div class="bar bar3"></div>
@@ -17,9 +21,6 @@
     methods: {
         triggerMenu(event) {
           this.menuOpen = !this.menuOpen;
-
-          // Make the hamburger menu visually open and close
-          event.currentTarget.classList.toggle('hamburger--close');
 
           // Raise a general event that the menu has been triggered
           this.$emit('trigger-menu');
