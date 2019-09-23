@@ -92,6 +92,24 @@ test('when the menu is closed the aria-expanded attribute is correctly set on th
   t.is(hamburgerButton.attributes('aria-expanded'), 'false');
 });
 
+test('when the menu is open the hamburger--close class is correctly set on the component', (t) => {
+  // Set the menu to be initially open
+  const hamburgerMenuWrapper = hamburgerMenuFactory({menuOpen: true});
+
+  const hamburgerButton = hamburgerMenuWrapper.find('button');
+
+  t.true(hamburgerButton.classes('hamburger--close'));
+});
+
+test('when the menu is closed the hamburger--close class is not present on the component', (t) => {
+  // Set the menu to be initially closed
+  const hamburgerMenuWrapper = hamburgerMenuFactory({menuOpen: false});
+
+  const hamburgerButton = hamburgerMenuWrapper.find('button');
+
+  t.false(hamburgerButton.classes('hamburger--close'));
+});
+
 test('Hamburger menu snapshot test', (t) => {
   const hamburgerMenuWrapper = hamburgerMenuFactory({menuOpen: false});
   t.snapshot({ html: hamburgerMenuWrapper.html() })
