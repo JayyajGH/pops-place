@@ -1,12 +1,12 @@
 <template>
-  <button class="hamburger"
+  <button class="hamburger hamburger--light"
           :class="menuOpen ? 'hamburger--close' : ''"
           @click="triggerMenu"
           :aria-expanded="menuOpen ? 'true' : 'false'"
           aria-label="Mobile menu trigger">
-    <div class="bar bar1"></div>
-    <div class="bar bar2"></div>
-    <div class="bar bar3"></div>
+    <div class="bar bar--dark bar1"></div>
+    <div class="bar bar--dark bar2"></div>
+    <div class="bar bar--dark bar3"></div>
   </button>
 </template>
 
@@ -35,15 +35,21 @@
 <style scoped>
   .hamburger {
     border: none;
+  }
+
+  .hamburger--light {
     background-color: var(--white);
   }
 
   .bar {
     width: 35px;
     height: 5px;
-    background-color: var(--black);
     margin: 6px auto 6px auto;
     transition: 0.4s;
+  }
+
+  .bar--dark {
+    background-color: var(--black);
   }
 
   /* Rotate first bar */
