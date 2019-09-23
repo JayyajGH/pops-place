@@ -48,9 +48,6 @@
     },
     methods: {
       triggerMenu: function (event) {
-        //var mainSiteNav = document.getElementsByClassName('site-nav')[0];
-        //var pageBody = document.getElementsByTagName('body')[0];
-
         var mainSiteNav = document.querySelector('.site-nav');
         var pageBody = document.querySelector('body');
 
