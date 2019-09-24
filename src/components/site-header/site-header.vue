@@ -9,11 +9,21 @@
       </div>
 
       <ul class="site-nav__menu site-nav__menu--normal">
-          <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('menuBeer')}}</a></li>
-          <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('menuFood')}}</a></li>
-          <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('menuGallery')}}</a></li>
-          <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('menuAbout')}}</a></li>
-          <li class="site-nav__item"><a href="#" class="site-nav__link">{{$t('menuContact')}}</a></li>
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">{{$t('menuBeer')}}</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">{{$t('menuFood')}}</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">{{$t('menuGallery')}}</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">{{$t('menuAbout')}}</a>
+          </li>
+          <li class="site-nav__item">
+            <a href="#" class="site-nav__link">{{$t('menuContact')}}</a>
+          </li>
       </ul>
 
       <div class="language-switch">

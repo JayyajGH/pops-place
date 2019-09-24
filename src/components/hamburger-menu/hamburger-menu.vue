@@ -26,7 +26,9 @@
           this.$emit('trigger-menu');
 
           // Raise a specific event that the menu has either been opened or closed
-          this.menuOpen ? this.$emit('trigger-menu-opened') : this.$emit('trigger-menu-closed');
+          this.menuOpen
+            ? this.$emit("trigger-menu-opened")
+            : this.$emit("trigger-menu-closed");
         }
       }
   }
