@@ -23,8 +23,11 @@
 
     <div class="hero__wrapper">
       <div class="hero">
-        <h1 class="u-hidden-visually">Pop's Place</h1>
-        <img src="~/assets/images/logo-large.png" class="logo__image" alt="">
+        <!-- Add an h1 for SEO purposes -->
+        <h1 class="u-hidden-visually">
+          Pop's Place
+        </h1>
+        <img src="~/assets/images/logo-large.png" class="logo__image" alt="Pop's place logo">
         <h2 class="tag">
           <span class="tag__text">GOURMET BURGERS</span>
           <span class="tag__text">CRAFT BEER</span>

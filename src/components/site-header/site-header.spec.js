@@ -15,5 +15,4 @@ test.beforeEach(() => {
 test('it renders the correct initial markup', (t) => {
   // Check that the component is at least created in it's most basic sense
   t.true(wrapper.is('header'));
-  t.true(true);
 });
