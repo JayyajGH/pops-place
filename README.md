@@ -2,7 +2,7 @@
 
 **This is currently work in progress**
 
-This is a theoretical homepage for a bar to test out some ideas.  It's key features are:
+This is the homepage for the pops place bar.  It's key features are:
 * Multiple languages
 * Has an image gallery
 
