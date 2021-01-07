@@ -6,6 +6,9 @@ This is the homepage for the pops place bar.  It's key features are:
 * Multiple languages
 * Has an image gallery
 
+Currently hosted at:
+http://pops-place.s3-website.eu-west-2.amazonaws.com/
+
 
 ## Build Setup
 
