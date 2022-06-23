@@ -27,7 +27,7 @@
     "eslint-loader": "^3.0.0",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-vue": "^5.2.3",
-    "jsdom": "^15.1.1",
+    "jsdom": "^16.5.0",
     "jsdom-global": "^3.0.2",
     "module-alias": "^2.2.1",
     "nodemon": "^1.18.9",
